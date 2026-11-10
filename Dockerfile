@@ -1,5 +1,8 @@
 FROM php:8.2-apache
 
+# Εγκατάσταση των MySQL drivers (PDO και mysqli)
+RUN docker-php-ext-install pdo pdo_mysql mysqli
+
 # Ορίζουμε τον σωστό φάκελο εργασίας του Apache
 WORKDIR /var/www/html
 
